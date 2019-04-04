@@ -4,6 +4,9 @@ File list
   > company_urls.txt
   > company_fundamentals.txt
 '''
+import scrapy, re
+from datetime import datetime
+from scrapy.crawler import CrawlerProcess
 
 def create_url_list(url):
   f1 = open('company_symbols.txt', 'r')
