@@ -13,8 +13,8 @@ A slightly more detailed and context specific explaination would be:
 - Clean and sort data:
 	>Finally, the third function opens 'company_fundamentals.txt', cleans and filters data that is unwanted with a simple criteria of dividend yield greater than 8%.  
 	
-Honestly, the code is pretty shit, but the architecture/ concept is sound IMO. Will slowly improve it! Just using this to test out github instead of 'hello world'. 
+Honestly, the code is pretty shit, but the architecture/ concept is sound IMO. Will slowly improve it! Just using this to test out github instead of 'hello world'.
 
-Certainly going to look back on this and laugh someday, cheers anyways~
+Once again, the code is shit but it just proves <b>| scrape > store > process > read | x [repeat]</b> is possible for myself, cheers anyways~
 
 /ᐠ. ᴗ.ᐟ\ Happy developing /ᐠ. ᴗ.ᐟ\
