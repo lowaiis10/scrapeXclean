@@ -17,7 +17,7 @@ def create_url_list(url):
 		f2.write('%s|%s\n'%(symbol,link))
   
 def get_company_fundmentals():
-  f1 = open('company_urls.txt', 'w+')
+  f1 = open('company_urls.txt', 'r')
   f2 = open('company_fundmanentals.txt', 'w+')  
 	data = f1.read().splitlines()
 	symbol_list = []
