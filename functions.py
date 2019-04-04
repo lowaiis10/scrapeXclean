@@ -26,24 +26,19 @@ def get_company_fundmentals():
 		x = x.split('|')
 		symbol_list.append(x[0])
 		url_list.append(x[1])
-
 	class FundamentalsExtractionSpider(scrapy.Spider):
 		name = 'fundamental_spider'
 		company_symbols = symbol_list
 		start_urls = url_list
-    
 		def parse(self, response):
-        # Insert your own identifier accordingly in .css('')
+			# Insert your own identifier accordingly in .css('')
 			name = response.css('').css('::text').extract()
 			dividend_yield = response.css('').css('::text').extract()
 				f2.write('%s|%s\n'%(name, dividend_yield))
 			  yield {'name':name}	
-
-
 	process = CrawlerProcess({
 	    'USER_AGENT': "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.131 Safari/537.36"
 	})
-
 	spider =FundamentalsExtractionSpider()
 	process.crawl(spider)
 	process.start()
@@ -52,10 +47,8 @@ def get_company_fundmentals():
 	f1 = open('company_fundamentals.txt', 'r')
 	f2 = open('company_cleaned.txt', 'w+')
 	data = f5.read().splitlines()
-
 	for x in data:
 		x = x.split('|')
-
 		if dividend_yield > min_yield:
-			f6.write('%s|%s|%s\n'%(x[0],str(dividend_yield)))
+			f2.write('%s|%s|%s\n'%(x[0],str(dividend_yield)))
 
