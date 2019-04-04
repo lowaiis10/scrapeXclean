@@ -45,7 +45,7 @@ def get_company_fundmentals():
 	process.crawl(spider)
 	process.start()
   
-  def process_003(min_yield):
+  def clean_and_process_data(min_yield):
 	f1 = open('company_fundamentals.txt', 'r')
 	f2 = open('company_cleaned.txt', 'w+')
 	data = f5.read().splitlines()
