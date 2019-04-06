@@ -1,4 +1,5 @@
 # scrapeXclean
+A digital vaccum machine ( Of sorts )
 
 Just a test project that works in the following sequence:
   1. Creates a list of urls using company symbols 
